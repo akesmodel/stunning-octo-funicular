@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ballot{
-    String[] cands={"Pancakes","Waffles","French Toast","Crepes"};
+    private static String[] cands={"Pancakes","Waffles","French Toast","Crepes"};
     private String[] votes;
     public Ballot(){
         votes=new String[4];
@@ -38,7 +38,7 @@ public class Ballot{
     public String[] getVoteList(){
         return votes;
     }
-    public String[] getCandidateList(){
+    public static String[] getCandidateList(){
         return cands;
     }
     public String toString(){
