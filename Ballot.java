@@ -7,10 +7,8 @@ public class Ballot{
         votes=new String[4];
     }
     public Ballot(String a, String b, String c, String d){
-        votes[0]=a;
-        votes[1]=b;
-        votes[2]=c;
-        votes[3]=d;
+        String[] votes={a,b,c,d};
+        this.votes=votes;
     }
 
     public void castVote(){
@@ -43,9 +41,9 @@ public class Ballot{
     }
     public String toString(){
         String toRet="First choice: "+votes[0];
-        toRet+="\n Second choice: "+votes[1];
-        toRet+="\n Third choice: "+votes[2];
-        toRet+="\n Fourth choice: "+votes[3];
+        toRet+="\nSecond choice: "+votes[1];
+        toRet+="\nThird choice: "+votes[2];
+        toRet+="\nFourth choice: "+votes[3];
         return toRet;
     }
 }
