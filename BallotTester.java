@@ -2,12 +2,13 @@ import java.util.ArrayList;
 
 public class BallotTester{
     public static void main(String[] args){
-        Ballot vote1= new Ballot("French Toast", "French Toast", "Waffles", "Crepes");
+        Ballot vote1= new Ballot("Waffles", "French Toast", "Crepes", "Pancakes");
         System.out.println(vote1.toString());
-        Ballot vote2= new Ballot("Crepes", "Pancakes", "French Toast", "Crepes");
-        Ballot vote3= new Ballot("Crepes", "Crepes", "Waffles", "Crepes");
-        Ballot vote4= new Ballot("French Toast", "Crepes", "Crepes", "Waffles");
-        Ballot vote5= new Ballot("Waffles", "Crepes", "French Toast", "Pancakes");
+        Ballot vote2= new Ballot("Waffles", "French Toast", "Pancakes", "Crepes");
+        Ballot vote3= new Ballot("Pancakes", "French Toast", "Waffles", "Crepes");
+        Ballot vote4= new Ballot("French Toast", "Crepes", "Pancakes", "Waffles");
+        Ballot vote5= new Ballot();
+        vote5.castVote();
         ArrayList<Ballot> hold=new ArrayList<Ballot>();
         hold.add(vote1);
         hold.add(vote2);

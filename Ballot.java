@@ -13,24 +13,30 @@ public class Ballot{
 
     public void castVote(){
         Scanner scanner= new Scanner(System.in);
-        System.out.println("First choice candidate:");
-        votes[0]=scanner.next();
-        System.out.println("Second choice candidate:");
-        while (scanner.next().equals(votes[0])){
-            System.out.println("You can't vote for the same person twice. Try again.");
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Choice "+ (i+1)+": Pancakes [A], Waffles [B], French Toast [C], or Crepes [D]?"); 
+            char c =scanner.next().charAt(0);
+            if (c=='A'){
+                votes[i]="Pancakes";
+            }
+            else if (c=='B'){
+                votes[i]="Waffles";
+            }
+            else if (c=='C'){
+                votes[i]="French Toast";
+            }
+            else if (c=='D'){
+                votes[i]="Crepes";
+            }
         }
-        votes[1]=scanner.next();
-        System.out.println("Third choice candidate:");
-        while (scanner.next().equals(votes[0])||scanner.next().equals(votes[1])){
-            System.out.println("You can't vote for the same person twice. Try again.");
+        for (int i = 0; i < 4; i++) {
+            for (int j = i+1; j < 4; j++) {
+                if (votes[i].equals(votes[j])){
+                    System.out.println("Please only choose each candidate once. Try again.");
+                    castVote();
+                }
+            }
         }
-        votes[2]=scanner.next();
-        System.out.println("Fourth choice candidate:");
-        while (scanner.next().equals(votes[0])||scanner.next().equals(votes[1])||scanner.next().equals(votes[2])){
-            System.out.println("You can't vote for the same person twice. Try again.");
-        }
-        votes[3]=scanner.next();
-        
     }
 
     public String[] getVoteList(){
