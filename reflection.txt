@@ -1,0 +1,23 @@
+My general motivation for exploring this choice was my interest in music, 
+particularly older music, and I was interested in seeing what factors influence the making of a popular song. 
+The data, collated at MIT, consisted of taking almost 1000 hit songs from the 1980’s across all genres, 
+and analyzing many of their different attributes, including tempo, duration, and time signature. 
+I ended up further exploring my question of what key signatures were the most and least popular for these songs.
+
+
+From my dataset, for every entry, I kept a total tally of how many songs were in each key, and extracted the value of column 6
+(ie. I parsed each line to an ArrayList and took the value at index 6), 
+which was a number from 0-11 corresponding to each of the 12 keys in music. 
+I then increased the tally for that corresponding key, and once all of the data was collected, 
+I calculated the total tallies for each key and which was most popular. 
+After writing my code, I ran into a lot of error messages, 
+but these were quickly solved by triple checking my file locations and making sure I was calling the correct pathname.
+
+The data showed that the most popular key signature, with 159 songs, was C major, 
+a result I was anticipating, as it’s the simplest key. The other two keys with over 100 songs apiece were G and A, 
+which are good keys for both vocalists and guitarists. 
+However, I’m not entirely sure of the validity of all of these songs–for example Jessie’s Girl, which is in D major, 
+is listed as being in G instead, and with a set of 1000 entries, 
+I wouldn’t be able to go through them all and manually check their correctness, 
+especially the ones I don’t know. If I had more time, I’d examine the correlation between energy and danceability in songs, 
+which was one of my other original questions.
